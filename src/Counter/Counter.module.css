@@ -1,0 +1,58 @@
+/*.wrapper {*/
+/*    position: relative*/
+/*}*/
+
+.counter {
+    border: 2px solid #5fd1f4;
+    width: 300px;
+    height: 270px;
+    margin-left: 400px;
+    margin-top: 20px;
+    position: absolute;
+}
+
+.result {
+    border: 2px solid #5fd1f4;
+    width: 270px;
+    height: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-weight: bold;
+    color: #5fd1f4;
+}
+
+.error {
+    color: #f11344;
+}
+.small{
+    font-size: 20px;
+}
+.large{
+    font-size: 70px;
+}
+
+.footer {
+    border: 2px solid #5fd1f4;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 270px;
+    height: 90px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer button{
+    margin-left: 10px;
+}

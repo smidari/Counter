@@ -1,0 +1,25 @@
+.myButton {
+    background: linear-gradient(to bottom, #5fd1f4 5%, #019ad2 100%);
+    background-color: #5fd1f4;
+    border-radius: 6px;
+    border: 1px solid #057fd0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 14px 24px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #5b6178;
+
+}
+
+.myButton:disabled {
+    background: #bababa;
+}
+
+
+.myButton:active {
+    position: relative;
+
+}
