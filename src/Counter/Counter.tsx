@@ -9,13 +9,14 @@ type CounterType = {
     count: number
     upCounter: () => void
     resetCounter: () => void
-    disNumberForInc?: number
-    disNumberForReset?: number
+    disNumberForInc?: number | boolean
+    disNumberForReset?: number | boolean
 }
 
 const Counter = (props: CounterType) => {
     let {isSetValue, maxValue, startValue, count, upCounter, resetCounter, disNumberForInc, disNumberForReset} = props;
-    function resultNameForSpan() {
+
+    function resultValueForSpan() {
         if ((startValue < 0 && !isSetValue) || startValue === maxValue) {
             return 'Incorrect value'
         } else if (startValue >= 0 && !isSetValue) {
@@ -31,8 +32,8 @@ const Counter = (props: CounterType) => {
                 <span
                     className={`${s.text} ${((startValue < 0 && !isSetValue) || startValue === maxValue) ? s.error : ''}
                     ${isSetValue && count === disNumberForInc ? s.error : ''}
-                    ${typeof resultNameForSpan() === "string" ? s.small : s.large}`}
-                >{resultNameForSpan()}
+                    ${typeof resultValueForSpan() === "string" ? s.small : s.large}`}
+                >{resultValueForSpan()}
                 </span>
             </div>
             <div className={s.footer}>
@@ -40,12 +41,12 @@ const Counter = (props: CounterType) => {
                     name={'inc'}
                     value={count}
                     onClick={upCounter}
-                    disNumberForInc={disNumberForInc}/>
+                    disabled={disNumberForInc}/>
                 <MyBtn
                     name={'reset'}
                     value={count}
                     onClick={resetCounter}
-                    disNumberForReset={disNumberForReset}/>
+                    disabled={disNumberForReset}/>
             </div>
         </div>
     )

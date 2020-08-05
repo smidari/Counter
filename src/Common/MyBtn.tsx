@@ -3,15 +3,15 @@ import s from "./MyBtn.module.css";
 
 type MyBtnType = {
     name: string
-    disNumberForInc?: number
-    disNumberForReset?: number
+    disabled?: number | boolean
     value?: number
     onClick: () => void
 }
 
+
 const MyBtn = (props: MyBtnType) => (
     <button
-        disabled={props.value === props.disNumberForReset || props.value === props.disNumberForInc}
+        disabled={typeof props.disabled === "boolean" ? props.disabled : props.value === props.disabled}
         className={s.myButton}
         onClick={() => props.onClick()}
     >{props.name}
